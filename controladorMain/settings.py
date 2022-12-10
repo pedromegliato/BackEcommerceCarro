@@ -98,6 +98,18 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+# Abaixo configuração para conexão com outros SGBD's
+# OBS. É importante lembrar que será necessário instalar  a biblioteca do banco desejado para que funcione
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql', #exemplo do MYSQL, CASO USE OUTRO< TEM QUE MODIFICAR A ENGINE DE ACORDO
+#         'NAME': 'NOME DO BANCO',
+#         'USER': 'NOME DE USUARIO',
+#         'PASSWORD': 'SENHA DO USUARIO',
+#         'HOST': 'HOST DO BANCO',
+#         'PORT': '3306',
+#     }
+# }
 
 
 
@@ -152,7 +164,6 @@ REST_FRAMEWORK = {
     ),
     'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.coreapi.AutoSchema',
     # 'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
-    # 'PAGE_SIZE': 2
 }
 
 
@@ -184,9 +195,9 @@ SIMPLE_JWT = {
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
-EMAIL_HOST_USER = 'site.amigosdemaria@gmail.com'
+EMAIL_HOST_USER = 'EMAIL'
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
-EMAIL_HOST_PASSWORD = 'xsmyisnuhcdgvdpy'
+EMAIL_HOST_PASSWORD = 'SENHA API'
 EMAIL_USE_TLS = True
 
 AUTH_USER_MODEL = "usuarios.User" 
